@@ -1,0 +1,16 @@
+name: Rclone Bot
+on:
+  workflow_dispatch:
+jobs:
+  run-sync-service:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Downloading the Script
+        run: |
+          wget https://gist.github.com/BlackFoxy616/9d569f7095ba9a731c535a8ba552f2fa/raw/rcmltb.sh
+      - name: Permission
+        run: |
+           chmod 777 rcmltb.sh
+      - name: Running the Script
+        run: |
+           ./rcmltb.sh
